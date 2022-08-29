@@ -1,0 +1,53 @@
+<window title="Library App" width="1910px" border="normal"
+    apply="libApp.Controller">
+    <hbox align="center">
+        Book :
+        <textbox id="keywordBox" />
+        <button id="searchButton" label="Search" iconSclass="z-icon-search" />
+    </hbox>
+    <listbox id="bookListbox" emptyMessage="book not available" height="160px" style="margin-top:10px">
+        <listhead>
+            <listheader label="Book's Name" />
+            <listheader label="Author" width="50%"/>
+        </listhead>
+        <template name="model">
+            <listitem>
+                <listcell label="${each.name}"></listcell>
+                <listcell label="${each.author}"></listcell>
+            </listitem>
+        </template>
+    </listbox>
+     <hbox align="center">
+        Customer's Name :
+        <textbox id="keywordBox2" />
+        <button id="searchButton2" label="Search" iconSclass="z-icon-search" />
+    </hbox>
+    <listbox id="custListbox" emptyMessage="Not existing customer" height="160px" style="margin-top:10px">
+        <listhead>
+            <listheader label="Customer's Name" />
+            <listheader label="Customer's Book" width="50%"/>
+        </listhead>
+        <template name="model">
+            <listitem>
+                <listcell label="${each.name}"></listcell>
+                <listcell label="${each.book.getName()}"></listcell>
+            </listitem>
+        </template>
+    </listbox>
+     <hbox align="center">
+        Lend Book :
+        <textbox id="keywordBox3" />
+        To :
+        <textbox id="keywordBox4" />
+        <button id="lend" label="Lend" />
+    </hbox>
+     <hbox align="center">
+        Return book to the library :
+        <textbox id="keywordBox5" />
+        From :
+        <textbox id="keywordBox6" />
+        <button id="breturn" label="Return" />
+    </hbox>
+    
+</window>
+
